@@ -6,6 +6,9 @@ public class Main {
     public static void main (String [] args){
         Scanner scan = new Scanner(System.in);
         int op = 0;
+        ArrayList<DispositivoloT> redes = new ArrayList<DispositivoloT>();
+        DispositivoloT disp1 = new SemaforoInteligente("Rojo", "SI_223005", "Norte", true);
+        DispositivoloT disp2 = new PanelInformativo("")
 
         while(op < 6){
             System.out.println("###BIENVENIDX A SMART CITY###");

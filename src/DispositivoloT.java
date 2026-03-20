@@ -5,10 +5,10 @@ public abstract class DispositivoloT {
     private String ubicacion;
     private boolean encendido;
 
-    public DispositivoloT(String id, String ubicacion, boolean encendido){
+    public DispositivoloT(String id, String ubicacion){
         this.id = id;
         this.ubicacion = ubicacion;
-        this.encendido = encendido;
+        this.encendido = false;
     }
 
     public String getId(){return id;}

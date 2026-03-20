@@ -2,27 +2,29 @@ public class SemaforoInteligente extends DispositivoloT implements Mantenible, C
 
     private String estadoActual;
 
-    public SemaforoInteligente(String estadoActual, String id, String ubicacion, boolean encendido){
+    public SemaforoInteligente(String estadoActual, String id, String ubicacion){
         this.estadoActual = estadoActual;
-        super(id, ubicacion, encendido);
+        super(id, ubicacion);
     }
 
     public double calcularCosteMantenimiento() {
-        return 0;
+        return 150.0;
     }
 
     public void realizarMantenimiento(){
-
+        System.out.println("Mantenimiento físico realizado a semáforo [ " + getId() + " ]. Coste: 150€");
     };
 
     public boolean conectarWifi() {
-        return false;
+        System.out.println("Semáforo [ " + getId() + " ] conectado a la WiFi.");
+        return true;
     }
-
 
     public void reiniciarDispositivo() {
-
+        System.out.println("Reiniciando dispositivo [ " + getId() +" ] ...");
     }
 
-    public void procesarDatos(){}
+    public void procesarDatos(){
+        System.out.println("Semáforo [ " + getId() + "] en " + getUbicacion() + " - Estado: " + estadoActual);
+    }
 }
